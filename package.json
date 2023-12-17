@@ -17,7 +17,8 @@
     "lint:fix": "npm run --silent lint:style:fix; npm run --silent lint:es:fix",
     "preinstall": "npx typesync ||:",
     "format": "npx prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx}'",
-    "fix": "npm run --silent format; npm run --silent lint:fix"
+    "fix": "npm run --silent format; npm run --silent lint:fix",
+    "new-article": "ts-node scripts/new-article.ts"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
