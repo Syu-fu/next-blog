@@ -1,0 +1,22 @@
+.head {
+  margin-bottom: 7.5rem;
+  color: var(--color-text);
+}
+
+.tag {
+  padding: 0.2rem 1rem;
+  margin-right: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--color-secondary);
+  background-color: #f2f2f2;
+  border-radius: 0.5rem;
+}
+
+.tags {
+  width: 100%;
+}
+
+.date {
+  font-size: 1.4rem;
+  color: var(--color-secondary);
+}

@@ -1,0 +1,36 @@
+.main-content {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+  vertical-align: top;
+  border-bottom: 1px solid #eef2f8;
+}
+
+.main-content-title {
+  margin-bottom: 0;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--color-text);
+  border-bottom: none;
+}
+
+.main-content-post {
+  display: block;
+  width: calc(100% - 20px);
+}
+
+.main-content-date {
+  color: #626264;
+}
+
+.main-content-description {
+  color: #4d4d4d;
+}
+
+.main-content-link {
+  font-size: 1.2rem;
+  color: #349ef3;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,32 @@
+.link-icon {
+  margin-right: 0.5rem;
+  color: #9eabb3;
+}
+
+h2 .link-icon::before {
+  content: '##';
+}
+
+h3 .link-icon::before {
+  content: '###';
+}
+
+h4 .link-icon::before {
+  content: '####';
+}
+
+h5 .link-icon::before {
+  content: '#####';
+}
+
+h6 .link-icon::before {
+  content: '######';
+}
+
+.unordered-list {
+  padding-left: 2.4rem;
+}
+
+.ordered-list {
+  padding-left: 2.4rem;
+}
