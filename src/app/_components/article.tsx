@@ -29,9 +29,8 @@ export function Article({ post }: Props) {
           <Link
             href={`page/${post.contentName}`}
             className={styles['main-content-link']}
-          >
-            続きを読む
-          </Link>
+            aria-label={`記事「${post.frontMatter.title}」についての続きを読む`}
+          ></Link>
         </div>
       </article>
     </>

@@ -39,7 +39,7 @@
   --color-secondary: #4d4d4d;
   --color-note: #626264;
   --color-light: #9eabb3;
-  --color-link: #349ef3;
+  --color-link: #005aff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -139,7 +139,7 @@ code {
   font-family: var(--font-mono) !important;
   font-size: 1.4rem !important;
   font-weight: 400;
-  background: rgb(246 248 250);
+  background: #f6f8fa;
 }
 
 h2 {
@@ -220,11 +220,12 @@ div[data-remark-code-title='true'] {
   z-index: 2;
   width: fit-content;
   padding: 0.4rem 1.25rem 0.5rem;
+  margin-top: 0.55rem;
   font-family: var(--font-mono);
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.25rem;
-  color: #5d686f;
+  color: var(--color-text);
   letter-spacing: 0.025rem;
   background: #dce4eb;
   border-radius: 0 0 0.5rem;

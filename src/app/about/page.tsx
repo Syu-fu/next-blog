@@ -12,7 +12,7 @@ export default async function About() {
       <div className={styles['profile-container']}>
         <div className={styles.profile}>
           <Img
-            src={'profile-pic.jpg'}
+            src={'profile-pic.webp'}
             alt={`${blog.props.author.name}のプロフィール写真`}
             width={100}
             height={100}
