@@ -29,7 +29,12 @@ export default function HeaderMenu() {
 
   return (
     <>
-      <button ref={menuRef} onClick={toggleMenu} className={styles.button}>
+      <button
+        aria-label="menuButton"
+        ref={menuRef}
+        onClick={toggleMenu}
+        className={styles.button}
+      >
         <FontAwesomeIcon icon={faBars} className={styles.icon} />
       </button>
       <nav className={isOpen ? styles.opened : styles.closed}>
