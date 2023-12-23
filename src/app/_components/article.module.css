@@ -30,7 +30,11 @@
 
 .main-content-link {
   font-size: 1.2rem;
-  color: #349ef3;
+  color: var(--color-link);
   text-decoration: none;
   cursor: pointer;
+}
+
+.main-content-link::before {
+  content: '続きを読む';
 }
