@@ -1,4 +1,4 @@
-import '@/../node_modules/prism-theme-github/themes/prism-theme-github-light.css';
+import 'prism-theme-github/themes/prism-theme-github-light.css';
 import styles from './post.module.css';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -6,6 +6,7 @@ import remarkRehype from 'remark-rehype';
 import rehypePrism from 'rehype-prism-plus';
 import remarkCodeTitle from 'remark-code-title';
 import remarkToc from 'remark-toc';
+import { CopyButton } from '@/app/_components/copyButton';
 
 export function Post({ content }: { content: string }) {
   const H2 = ({ ...props }) => {
@@ -82,6 +83,13 @@ export function Post({ content }: { content: string }) {
       </>
     );
   };
+  const Pre = ({ ...props }) => {
+    return (
+      <>
+        <CopyButton className={props.className}>{props.children}</CopyButton>
+      </>
+    );
+  };
 
   return (
     <>
@@ -94,14 +102,10 @@ export function Post({ content }: { content: string }) {
           h6: H6,
           ul: Ul,
           ol: Ol,
+          pre: Pre,
         }}
-        remarkPlugins={[
-          remarkGfm,
-          remarkToc,
-          remarkCodeTitle,
-          remarkRehype,
-          rehypePrism,
-        ]}
+        remarkPlugins={[remarkGfm, remarkToc, remarkCodeTitle]}
+        rehypePlugins={[rehypePrism]}
       >
         {content}
       </ReactMarkdown>
