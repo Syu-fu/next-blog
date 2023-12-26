@@ -10,7 +10,7 @@ jobs:
         working-directory: contents
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Cache Dependencies
         uses: actions/setup-node@v4
