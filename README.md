@@ -1,6 +1,6 @@
 # next-blog
 
-blog system by [Syu-fu](https://github.com/Syu-fu?tab=repositories)
+blog system by [Syu-fu](https://github.com/Syu-fu)
 
 # Setup
 

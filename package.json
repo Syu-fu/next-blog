@@ -14,10 +14,11 @@
     "lint:style:fix": "stylelint --fix 'src/**/*.{css,less,sass,scss}'",
     "lint:markup": "markuplint 'src/**/*.{jsx,tsx}'",
     "lint:markup:fix": "markuplint --fix 'src/**/*.{jsx,tsx}'",
-    "lint": "npm run --silent lint:style; npm run --silent lint:es",
+    "lint": "npm run --silent lint:style; npm run --silent lint:es; npm run --silent lint:markup",
     "lint:fix": "npm run --silent lint:style:fix; npm run --silent lint:es:fix",
     "preinstall": "npx typesync ||:",
-    "format": "npx prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx}'",
+    "format": "npx prettier --write --log-level=warn 'src/**/*.{js,jsx,ts,tsx}'",
+    "format:check": "npx prettier --check --log-level=warn 'src/**/*.{js,jsx,ts,tsx}'",
     "fix": "npm run --silent format; npm run --silent lint:fix",
     "new-article": "ts-node scripts/new-article.ts"
   },

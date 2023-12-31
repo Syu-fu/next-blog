@@ -1,0 +1,41 @@
+name: pa11y
+on:
+  issue_comment:
+    types: [edited]
+
+jobs:
+  pa11y:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get Preview URL
+        id: capture_preview_url
+        uses: aaimio/vercel-preview-url-action@v2.2.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get Redirect URL
+        id: get_redirected_url
+        run: |
+          PREVIEW_URL="${{ steps.capture_preview_url.outputs.vercel_preview_url }}"
+          REDIRECTED_URL=$(curl -Ls -o /dev/null -w %{url_effective} "$PREVIEW_URL" | sed 's/\/$//')
+          echo "REDIRECTED_URL=$REDIRECTED_URL" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install -g pa11y-ci
+
+      - name: pa11y-ci
+        env:
+          REDIRECTED_URL: ${{ steps.get_redirected_url.outputs.REDIRECTED_URL }}
+          REDIRECTED_SITEMAP: ${{ steps.get_redirected_url.outputs.REDIRECTED_URL }}${{'/sitemap.xml'}}
+          REDIRECTED_RSS: ${{ steps.get_redirected_url.outputs.REDIRECTED_URL }}${{'/rss.xml'}}
+          REPLACE_BASE_URL: ' https://blog.syufu.dev'
+        run: |
+          pa11y-ci --config .pa11yci.json --sitemap $REDIRECTED_SITEMAP --sitemap-find $REPLACE_BASE_URL --sitemap-replace $REDIRECTED_URL
