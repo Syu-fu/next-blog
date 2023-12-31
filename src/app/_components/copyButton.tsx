@@ -29,6 +29,7 @@ export function CopyButton({
     <>
       <button
         className={styles['copy-button']}
+        aria-label="クリップボードにコピー"
         onClick={copy}
         disabled={isCopied}
         hidden={!onHover}
@@ -37,7 +38,7 @@ export function CopyButton({
         <FontAwesomeIcon
           className={styles['copy-icon']}
           icon={faCopy}
-          aria-label="クリップボードにコピー"
+          aria-hidden={true}
         />
       </button>
       <span
