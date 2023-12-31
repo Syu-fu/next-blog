@@ -1,0 +1,12 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 100000,
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox"
+      ],
+      "executablePath": "/usr/bin/chromium"
+    }
+  }
+}
