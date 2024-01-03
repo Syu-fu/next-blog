@@ -28,7 +28,7 @@ description: '.zshhistoryはコマンドの再実行に有効ですが新しい�
 
 - sourceを利用
 - FPATHを利用
-  - FPATHに設定したディレクトリのファイルを補完ファイルとして読み込む機能です。詳しい説明については[20 Completion System -zsh](https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Autoloaded-files)を参照してください。
+  - FPATHに設定したディレクトリのファイルを補完ファイルとして読み込む機能。詳しい説明については[20 Completion System -zsh](https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Autoloaded-files)を参照。
 
 上記2要素の組み合わせで4パターンとなっています。  
 それぞれのパターンの詳細な解説に移ります。
