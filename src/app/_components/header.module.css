@@ -63,3 +63,11 @@
 .menu-item a {
   color: var(--color-secondary);
 }
+
+@media (width < 700px) {
+  .menu-item {
+    height: 3.6rem;
+    font-size: 1.8rem;
+    text-align: left;
+  }
+}
