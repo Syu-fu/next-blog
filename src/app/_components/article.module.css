@@ -21,11 +21,11 @@
 }
 
 .main-content-date {
-  color: #626264;
+  color: var(--color-note);
 }
 
 .main-content-description {
-  color: #4d4d4d;
+  color: var(--color-secondary);
 }
 
 .main-content-link {

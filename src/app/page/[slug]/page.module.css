@@ -8,7 +8,7 @@
   margin-right: 0.5rem;
   font-size: 1.4rem;
   color: var(--color-secondary);
-  background-color: #f2f2f2;
+  background-color: var(--color-tag-bg);
   border-radius: 0.5rem;
 }
 

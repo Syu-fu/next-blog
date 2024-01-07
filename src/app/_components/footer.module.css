@@ -14,5 +14,5 @@
   height: auto;
   padding: 20px;
   font-size: 1.3rem;
-  color: #4b5563;
+  color: var(--color-title);
 }
