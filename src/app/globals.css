@@ -40,6 +40,14 @@
   --color-note: #626264;
   --color-light: #9eabb3;
   --color-link: #005aff;
+  --color-title: #4b5563;
+  --color-background: #fff;
+  --color-menu-icon: #88909a;
+  --color-check-font: #fff;
+  --color-check-bg: #4b5563;
+  --color-tag-bg: #f2f2f2;
+  --color-code-bg: #f6f8fa;
+  --color-shadow: 0 0 0;
 }
 
 @media (prefers-color-scheme: light) {
@@ -69,10 +77,6 @@
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
-    --color-text: #1a1a1c;
-    --color-secondary: #4d4d4d;
-    --color-note: #626264;
-    --color-light: #eef2f8;
   }
 }
 
@@ -98,6 +102,7 @@ body {
   overflow-y: scroll;
   font-size: 1.6rem;
   color: rgb(var(--foreground-rgb));
+  background: var(--color-background);
 }
 
 html,
@@ -109,12 +114,6 @@ a {
   color: var(--color-link);
   text-decoration: none;
   cursor: pointer;
-}
-
-@media (prefers-color-scheme: light) {
-  html {
-    color-scheme: light;
-  }
 }
 
 .code-line {
@@ -139,7 +138,11 @@ code {
   font-family: var(--font-mono) !important;
   font-size: 1.4rem !important;
   font-weight: 400;
-  background: #f6f8fa;
+  background: var(--color-code-bg);
+}
+
+h1 {
+  color: var(--color-text);
 }
 
 h2 {
@@ -213,6 +216,7 @@ td {
 
 pre {
   padding-top: 1.8rem !important;
+  color: #fff;
 }
 
 div[data-remark-code-title='true'] {
@@ -225,7 +229,7 @@ div[data-remark-code-title='true'] {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.25rem;
-  color: var(--color-text);
+  color: #1a1a1c;
   letter-spacing: 0.025rem;
   background: #dce4eb;
   border-radius: 0 0 0.5rem;
@@ -236,5 +240,5 @@ li {
 }
 
 span {
-  color: var(--color-text);
+  color: #1a1a1c;
 }
