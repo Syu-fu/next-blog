@@ -35,7 +35,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-markdown": "^9.0.1",
-    "rehype-prism-plus": "^1.6.3",
+    "rehype-prism-plus": "^2.0.0",
     "remark-code-title": "^0.2.5",
     "remark-gfm": "^4.0.0",
     "remark-rehype": "^11.0.0",
