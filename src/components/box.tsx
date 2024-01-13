@@ -1,5 +1,6 @@
-import styles from '@/components/box.module.css';
 import React from 'react';
+
+import styles from '@/components/box.module.css';
 
 type Props = {
   children: React.ReactNode;

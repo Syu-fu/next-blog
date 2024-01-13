@@ -1,5 +1,5 @@
-import { getBlogData } from '@/lib/getBlogData';
 import styles from '@/components/footer.module.css';
+import { getBlogData } from '@/lib/getBlogData';
 
 export default function Footer() {
   const data = getBlogData();

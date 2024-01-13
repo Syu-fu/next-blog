@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { getBlogData } from '@/lib/getBlogData';
+
 import styles from '@/components/header.module.css';
 import HeaderMenu from '@/components/headerMenu';
+import { getBlogData } from '@/lib/getBlogData';
 
 export default function Header() {
   const data = getBlogData();

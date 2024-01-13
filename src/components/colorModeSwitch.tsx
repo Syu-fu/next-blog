@@ -1,9 +1,10 @@
 'use client';
 
-import { useLayoutEffect, useState } from 'react';
-import styles from '@/components/colorModeSwitch.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptop, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useLayoutEffect, useState } from 'react';
+
+import styles from '@/components/colorModeSwitch.module.css';
 
 export function ColorModeSwitch() {
   const [colorMode, setColorMode] = useState('system');

@@ -1,9 +1,10 @@
 'use client';
-import Link from 'next/link';
-import styles from '@/components/header.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+
+import styles from '@/components/header.module.css';
 
 export default function HeaderMenu() {
   const [isOpen, setIsOpen] = useState(false);

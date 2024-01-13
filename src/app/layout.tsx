@@ -1,11 +1,15 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import '@/app/globals.css';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
-import Box from '@/components/box';
-import GoogleAnalytics from '@/components/googleAnalytics';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import { Inter } from 'next/font/google';
+
+import Box from '@/components/box';
+import Footer from '@/components/footer';
+import GoogleAnalytics from '@/components/googleAnalytics';
+import Header from '@/components/header';
+
+import type { Metadata } from 'next';
+
+import '@/app/globals.css';
+
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 

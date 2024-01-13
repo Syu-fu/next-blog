@@ -1,8 +1,10 @@
-import styles from '@/app/page/[slug]/page.module.css';
 import fs from 'fs';
+
 import matter from 'gray-matter';
-import TOC from '@/converter/toc';
+
+import styles from '@/app/page/[slug]/page.module.css';
 import { Post } from '@/converter/post';
+import TOC from '@/converter/toc';
 import { getPost } from '@/lib/getPost';
 
 export default async function Content({
