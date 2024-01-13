@@ -1,9 +1,9 @@
 import styles from '@/app/page/[slug]/page.module.css';
 import fs from 'fs';
 import matter from 'gray-matter';
-import TOC from '@/app/_converter/toc';
-import { Post } from '@/app/_converter/post';
-import { getPost } from '@/app/_lib/getPost';
+import TOC from '@/converter/toc';
+import { Post } from '@/converter/post';
+import { getPost } from '@/lib/getPost';
 
 export default async function Content({
   params,

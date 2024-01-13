@@ -1,7 +1,7 @@
 import Rss from 'rss';
 import urlJoin from 'url-join';
-import { getPosts } from '@/app/_lib/getPosts';
-import { getBlogData } from '@/app/_lib/getBlogData';
+import { getPosts } from '@/lib/getPosts';
+import { getBlogData } from '@/lib/getBlogData';
 
 const data = getBlogData();
 

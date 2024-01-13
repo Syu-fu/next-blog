@@ -1,4 +1,4 @@
-import styles from '@/app/_components/box.module.css';
+import styles from '@/components/box.module.css';
 import React from 'react';
 
 type Props = {

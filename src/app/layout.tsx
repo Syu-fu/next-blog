@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
-import Header from './_components/header';
-import Footer from './_components/footer';
-import Box from './_components/box';
+import '@/app/globals.css';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import Box from '@/components/box';
+import GoogleAnalytics from '@/components/googleAnalytics';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import GoogleAnalytics from '@/app/_components/googleAnalytics';
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ['latin'] });

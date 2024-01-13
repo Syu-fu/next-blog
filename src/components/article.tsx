@@ -1,4 +1,4 @@
-import styles from '@/app/_components/article.module.css';
+import styles from '@/components/article.module.css';
 import Link from 'next/link';
 
 type Props = {

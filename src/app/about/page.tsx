@@ -1,6 +1,6 @@
-import styles from './about.module.css';
-import { getBlogData } from '@/app/_lib/getBlogData';
-import { Img } from '@/app/_components/Image';
+import styles from '@/app/about/about.module.css';
+import { getBlogData } from '@/lib/getBlogData';
+import { Img } from '@/components/Image';
 import { faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

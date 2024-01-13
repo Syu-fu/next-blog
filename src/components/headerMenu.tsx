@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import styles from '@/app/_components/header.module.css';
+import styles from '@/components/header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useRef, useState } from 'react';
