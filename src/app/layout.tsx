@@ -5,6 +5,7 @@ import Box from '@/components/box';
 import Footer from '@/components/footer';
 import GoogleAnalytics from '@/components/googleAnalytics';
 import Header from '@/components/header';
+import { getBlogData } from '@/lib/getBlogData';
 
 import type { Metadata } from 'next';
 
@@ -15,10 +16,13 @@ config.autoAddCss = false;
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: "Syu fu's blog",
-  description: "syu fu's blog",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const data = getBlogData();
+  return {
+    title: data.props.site.title,
+    description: data.props.site.description,
+  };
+}
 
 export default function RootLayout({
   children,
