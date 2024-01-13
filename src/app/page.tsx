@@ -1,5 +1,5 @@
-import { getPosts } from './_lib/getPosts';
-import { Article } from './_components/article';
+import { Article } from '@/components/article';
+import { getPosts } from '@/lib/getPosts';
 
 export default function Home() {
   const contents = getPosts();

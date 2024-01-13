@@ -1,6 +1,7 @@
-import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
-import style from '@/app/_converter/toc.module.css';
+import ReactMarkdown from 'react-markdown';
+
+import style from '@/converter/toc.module.css';
 
 const customH2 = ({ ...props }) => {
   return (

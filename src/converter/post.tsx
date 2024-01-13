@@ -1,12 +1,12 @@
 import 'prism-theme-github/themes/prism-theme-github-light.css';
-import styles from './post.module.css';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import remarkRehype from 'remark-rehype';
 import rehypePrism from 'rehype-prism-plus';
 import remarkCodeTitle from 'remark-code-title';
+import remarkGfm from 'remark-gfm';
 import remarkToc from 'remark-toc';
-import { CopyButton } from '@/app/_components/copyButton';
+
+import { CopyButton } from '@/components/copyButton';
+import styles from '@/converter/post.module.css';
 
 export function Post({ content }: { content: string }) {
   const H2 = ({ ...props }) => {

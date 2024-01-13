@@ -1,9 +1,10 @@
 'use client';
 
-import { useRef, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
-import styles from '@/app/_components/copyButton.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRef, useState } from 'react';
+
+import styles from '@/components/copyButton.module.css';
 
 export function CopyButton({
   className,

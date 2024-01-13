@@ -4,7 +4,7 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
 import { Suspense, useEffect } from 'react';
 
-import { existsGaId, GA_MEASUREMENT_ID, pageview } from '@/app/_lib/gtag';
+import { existsGaId, GA_MEASUREMENT_ID, pageview } from '@/lib/gtag';
 
 const GoogleAnalytics = () => {
   const pathname = usePathname();

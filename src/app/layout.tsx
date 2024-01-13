@@ -1,20 +1,28 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import Header from './_components/header';
-import Footer from './_components/footer';
-import Box from './_components/box';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import { Inter } from 'next/font/google';
+
+import Box from '@/components/box';
+import Footer from '@/components/footer';
+import GoogleAnalytics from '@/components/googleAnalytics';
+import Header from '@/components/header';
+import { getBlogData } from '@/lib/getBlogData';
+
+import type { Metadata } from 'next';
+
+import '@/app/globals.css';
+
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import GoogleAnalytics from '@/app/_components/googleAnalytics';
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: "Syu fu's blog",
-  description: "syu fu's blog",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const data = getBlogData();
+  return {
+    title: data.props.site.title,
+    description: data.props.site.description,
+  };
+}
 
 export default function RootLayout({
   children,

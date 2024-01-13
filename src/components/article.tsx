@@ -1,5 +1,6 @@
-import styles from '@/app/_components/article.module.css';
 import Link from 'next/link';
+
+import styles from '@/components/article.module.css';
 
 type Props = {
   post: {
