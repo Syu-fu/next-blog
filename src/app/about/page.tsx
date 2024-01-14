@@ -5,6 +5,16 @@ import styles from '@/app/about/about.module.css';
 import { Img } from '@/components/Image';
 import { getBlogData } from '@/lib/getBlogData';
 
+import type { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const data = getBlogData();
+  return {
+    title: `About | ${data.props.site.title}`,
+    description: `${data.props.site.description}'s about`,
+  };
+}
+
 export default async function About() {
   const blog = getBlogData();
   return (
