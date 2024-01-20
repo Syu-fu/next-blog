@@ -7,8 +7,8 @@ import type { Metadata } from 'next';
 export async function generateMetadata(): Promise<Metadata> {
   const data = getBlogData();
   return {
-    title: data.props.site.title,
-    description: data.props.site.description,
+    title: data.site.title,
+    description: data.site.description,
   };
 }
 
@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <section>
-        {contents.props.posts.map((post) => {
+        {contents.posts.map((post) => {
           return <Article key={post.contentName} post={post} />;
         })}
       </section>

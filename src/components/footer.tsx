@@ -7,8 +7,7 @@ export default function Footer() {
     <footer className={styles['footer-wrapper']}>
       <div className={styles.footer}>
         <p className={styles.copyright}>
-          © {new Date().getFullYear()} {data.props.author.name}. All Rights
-          Reserved
+          © {new Date().getFullYear()} {data.author.name}. All Rights Reserved
         </p>
         <p className={styles.privacy}>
           このサイトは Google Analytics を使用しています。

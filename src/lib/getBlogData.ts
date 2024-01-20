@@ -1,11 +1,11 @@
 import fs from 'fs';
 
-export function getBlogData() {
+import type BlogData from '@/types/blogData';
+
+export function getBlogData(): BlogData {
   const data = fs.readFileSync('blog.json');
 
-  const objectData = JSON.parse(data.toString());
+  const objectData: BlogData = JSON.parse(data.toString());
 
-  return {
-    props: objectData,
-  };
+  return objectData;
 }

@@ -2,6 +2,8 @@ import fs from 'fs';
 
 import matter from 'gray-matter';
 
+import type FrontMatter from '@/types/frontMatter';
+
 export const getPosts = () => {
   const files = fs.readdirSync('contents/posts');
   const posts = files.map((fileName) => {
@@ -9,7 +11,7 @@ export const getPosts = () => {
     const fileContent = fs.readFileSync(`contents/posts/${fileName}`, 'utf-8');
     const { data } = matter(fileContent);
     return {
-      frontMatter: data,
+      frontMatter: data as FrontMatter,
       contentName: contentName,
     };
   });
@@ -21,8 +23,6 @@ export const getPosts = () => {
   );
 
   return {
-    props: {
-      posts: sortedPosts,
-    },
+    posts: sortedPosts,
   };
 };

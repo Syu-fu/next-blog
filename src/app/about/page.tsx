@@ -10,8 +10,8 @@ import type { Metadata } from 'next';
 export async function generateMetadata(): Promise<Metadata> {
   const data = getBlogData();
   return {
-    title: `About | ${data.props.site.title}`,
-    description: `${data.props.site.description}'s about`,
+    title: `About | ${data.site.title}`,
+    description: `${data.site.description}'s about`,
   };
 }
 
@@ -24,16 +24,16 @@ export default async function About() {
         <div className={styles.profile}>
           <Img
             src={'profile-pic.webp'}
-            alt={`${blog.props.author.name}のプロフィール写真`}
+            alt={`${blog.author.name}のプロフィール写真`}
             width={100}
             height={100}
             className={styles['profile-pic']}
           />
-          <p>{blog.props.author.name}</p>
+          <p>{blog.author.name}</p>
           <ul className={styles.links}>
             <li>
               <a
-                href={`https://twitter.com/${blog.props.author.external.xtwitter}`}
+                href={`https://twitter.com/${blog.author.external.xtwitter}`}
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faXTwitter} /> X(Twitter)
@@ -41,7 +41,7 @@ export default async function About() {
             </li>
             <li>
               <a
-                href={`https://github.com/${blog.props.author.external.github}`}
+                href={`https://github.com/${blog.author.external.github}`}
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faGithub} />
