@@ -6,7 +6,17 @@ import { Suspense, useEffect } from 'react';
 
 import { existsGaId, GA_MEASUREMENT_ID, pageview } from '@/lib/gtag';
 
-const GoogleAnalytics = () => {
+export default function GoogleAnalytics() {
+  return (
+    <>
+      <Suspense fallback={null}>
+        <Gtag />
+      </Suspense>
+    </>
+  );
+}
+
+function Gtag() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -38,6 +48,4 @@ const GoogleAnalytics = () => {
       </Suspense>
     </>
   );
-};
-
-export default GoogleAnalytics;
+}
