@@ -51,9 +51,9 @@ export default async function About() {
           </ul>
         </div>
         <div className={styles.description}>
-          <p
-            dangerouslySetInnerHTML={{ __html: blog.props.author.description }}
-          />
+          {blog.author.description.map((paragraph, index) => {
+            return <p key={index}>{paragraph}</p>;
+          })}
         </div>
       </div>
     </>
