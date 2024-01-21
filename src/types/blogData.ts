@@ -16,6 +16,7 @@ type BlogAuthor = {
   external: {
     github: string;
     xtwitter: string;
+    zenn: string;
   };
 };
 
