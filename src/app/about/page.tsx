@@ -73,7 +73,7 @@ export default async function About() {
   );
 }
 
-export function SimpleIconsZenn(props: SVGProps<SVGSVGElement>) {
+function SimpleIconsZenn(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
