@@ -21,8 +21,8 @@ export const generateMetadata = async ({
 
   if (!post) return notFound();
   return {
-    title: `${post.frontMatter.title} | ${data.props.site.title}`,
-    description: `${data.props.site.description}'s about`,
+    title: `${post.frontMatter.title} | ${data.site.title}`,
+    description: `${data.site.description}'s about`,
   };
 };
 

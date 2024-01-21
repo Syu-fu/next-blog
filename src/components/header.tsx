@@ -11,7 +11,7 @@ export default function Header() {
       <header className={styles.header}>
         <HeaderMenu />
         <Link className={styles.title} href="/">
-          {data.props.site.title}
+          {data.site.title}
         </Link>
       </header>
     </>

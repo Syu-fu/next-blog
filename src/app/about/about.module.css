@@ -13,7 +13,7 @@
 }
 
 .description {
-  display: flex;
+  display: block;
   align-items: center;
   color: var(--color-text);
 }

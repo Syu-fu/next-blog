@@ -7,10 +7,14 @@
   "author": {
     "name": "Syu fu",
     "email": "syu.fu.dev@gmail.com",
-    "description": "フロントエンド領域に重きを置きたい社会人3年目のエンジニアです。趣味はダーツです。<br/>DartsLive:Rt.6",
+    "description": [
+      "フロントエンド領域に重きを置きたい社会人3年目のエンジニアです。趣味はダーツです。",
+      "DartsLive:Rt.6"
+    ],
     "external": {
       "github": "Syu-fu",
-      "xtwitter": "SyufuDev"
+      "xtwitter": "SyufuDev",
+      "zenn": "syu_fu"
     }
   }
 }

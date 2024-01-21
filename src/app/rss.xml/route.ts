@@ -7,9 +7,9 @@ import { getPosts } from '@/lib/getPosts';
 const data = getBlogData();
 
 const blogData = {
-  SITE_URL: data.props.site.url,
-  DESCRIPTION: data.props.site.description,
-  TITLE: data.props.site.title,
+  SITE_URL: data.site.url,
+  DESCRIPTION: data.site.description,
+  TITLE: data.site.title,
 };
 
 export async function GET() {
@@ -22,7 +22,7 @@ export async function GET() {
   });
 
   const props = getPosts();
-  props.props.posts.forEach((post) => {
+  props.posts.forEach((post) => {
     feed.item({
       title: post.frontMatter.title,
       description: post.frontMatter.description,
