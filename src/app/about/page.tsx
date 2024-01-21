@@ -36,6 +36,7 @@ export default async function About() {
               <a
                 href={`https://twitter.com/${blog.author.external.xtwitter}`}
                 target="_blank"
+                rel="external noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faXTwitter} /> X(Twitter)
               </a>
@@ -44,6 +45,7 @@ export default async function About() {
               <a
                 href={`https://github.com/${blog.author.external.github}`}
                 target="_blank"
+                rel="external noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faGithub} />
                 GitHub
