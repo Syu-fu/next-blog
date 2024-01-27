@@ -1,6 +1,12 @@
+import { Noto_Sans } from 'next/font/google';
 import Link from 'next/link';
 
 import styles from '@/components/article.module.css';
+
+const notoSans = Noto_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+});
 
 type Props = {
   post: {
@@ -21,7 +27,9 @@ export function Article({ post }: Props) {
               {post.frontMatter.title}
             </Link>
           </h2>
-          <small className={styles['main-content-date']}>
+          <small
+            className={`${styles['main-content-date']} ${notoSans.className}`}
+          >
             {post.frontMatter.date}
           </small>
           <p className={styles['main-content-description']}>
