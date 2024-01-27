@@ -1,4 +1,5 @@
 import 'prism-theme-github/themes/prism-theme-github-light.css';
+import { Noto_Sans } from 'next/font/google';
 import ReactMarkdown from 'react-markdown';
 import rehypePrism from 'rehype-prism-plus';
 import remarkCodeTitle from 'remark-code-title';
@@ -8,13 +9,20 @@ import remarkToc from 'remark-toc';
 import { CopyButton } from '@/components/copyButton';
 import styles from '@/converter/post.module.css';
 
+const notoSans = Noto_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+});
+
 export function Post({ content }: { content: string }) {
   const H2 = ({ ...props }) => {
     return (
       <>
         <h2 id={props.children}>
           <a href={`#${props.children}`} aria-hidden="true" tabIndex={-1}>
-            <span className={styles['link-icon']}></span>
+            <span
+              className={`${styles['link-icon']} ${notoSans.className}`}
+            ></span>
           </a>
           {props.children}
         </h2>
@@ -26,7 +34,9 @@ export function Post({ content }: { content: string }) {
       <>
         <h3 id={props.children}>
           <a href={`#${props.children}`} aria-hidden="true" tabIndex={-1}>
-            <span className={styles['link-icon']}></span>
+            <span
+              className={`${styles['link-icon']} ${notoSans.className}`}
+            ></span>
           </a>
           {props.children}
         </h3>
@@ -38,7 +48,9 @@ export function Post({ content }: { content: string }) {
       <>
         <h4 id={props.children}>
           <a href={`#${props.children}`} aria-hidden="true" tabIndex={-1}>
-            <span className={styles['link-icon']}></span>
+            <span
+              className={`${styles['link-icon']} ${notoSans.className}`}
+            ></span>
           </a>
           {props.children}
         </h4>
@@ -50,7 +62,9 @@ export function Post({ content }: { content: string }) {
       <>
         <h5 id={props.children}>
           <a href={`#${props.children}`} aria-hidden="true" tabIndex={-1}>
-            <span className={styles['link-icon']}></span>
+            <span
+              className={`${styles['link-icon']} ${notoSans.className}`}
+            ></span>
           </a>
           {props.children}
         </h5>
@@ -62,7 +76,9 @@ export function Post({ content }: { content: string }) {
       <>
         <h6 id={props.children}>
           <a href={`#${props.children}`} aria-hidden="true" tabIndex={-1}>
-            <span className={styles['link-icon']}></span>
+            <span
+              className={`${styles['link-icon']} ${notoSans.className}`}
+            ></span>
           </a>
           {props.children}
         </h6>

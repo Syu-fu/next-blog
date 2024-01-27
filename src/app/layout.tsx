@@ -1,5 +1,5 @@
 import { config } from '@fortawesome/fontawesome-svg-core';
-import { Inter } from 'next/font/google';
+import { BIZ_UDPGothic } from 'next/font/google';
 
 import Box from '@/components/box';
 import Footer from '@/components/footer';
@@ -11,7 +11,10 @@ import '@/app/globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 
-const inter = Inter({ subsets: ['latin'] });
+const bizUdpGothic = BIZ_UDPGothic({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+});
 
 export default function RootLayout({
   children,
@@ -21,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <GoogleAnalytics />
-      <body className={inter.className}>
+      <body className={bizUdpGothic.className}>
         <Header />
         <Box>{children}</Box>
         <Footer />
