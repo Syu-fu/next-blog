@@ -25,7 +25,7 @@ jobs:
 
       - name: Generate Lighthouse report
         id: lighthouse_audit
-        uses: treosh/lighthouse-ci-action@v10
+        uses: treosh/lighthouse-ci-action@v11
         env:
           REDIRECTED_URL_BASE: ${{ steps.get_redirected_url.outputs.REDIRECTED_URL }}
           REDIRECTED_URL_ABOUT: ${{ steps.get_redirected_url.outputs.REDIRECTED_URL }}${{'about'}}
