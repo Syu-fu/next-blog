@@ -20,6 +20,7 @@ jobs:
         id: get_redirected_url
         run: |
           PREVIEW_URL="${{ steps.capture_preview_url.outputs.vercel_preview_url }}"
+          # shellcheck disable=1083
           REDIRECTED_URL=$(curl -Ls -o /dev/null -w %{url_effective} "$PREVIEW_URL" | sed 's/\/$//')
           echo "REDIRECTED_URL=$REDIRECTED_URL" >> "$GITHUB_OUTPUT"
 
@@ -38,4 +39,4 @@ jobs:
           REDIRECTED_RSS: ${{ steps.get_redirected_url.outputs.REDIRECTED_URL }}${{'/rss.xml'}}
           REPLACE_BASE_URL: ' https://blog.syufu.dev'
         run: |
-          pa11y-ci --config .pa11yci.json --sitemap $REDIRECTED_SITEMAP --sitemap-find $REPLACE_BASE_URL --sitemap-replace $REDIRECTED_URL
+          pa11y-ci --config .pa11yci.json --sitemap "$REDIRECTED_SITEMAP" --sitemap-find "$REPLACE_BASE_URL" --sitemap-replace "$REDIRECTED_URL"

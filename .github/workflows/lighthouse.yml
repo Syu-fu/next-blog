@@ -20,6 +20,7 @@ jobs:
         id: get_redirected_url
         run: |
           PREVIEW_URL="${{ steps.capture_preview_url.outputs.vercel_preview_url }}"
+          # shellcheck disable=SC1083
           REDIRECTED_URL=$(curl -Ls -o /dev/null -w %{url_effective} "$PREVIEW_URL")
           echo "REDIRECTED_URL=$REDIRECTED_URL" >> "$GITHUB_OUTPUT"
 
