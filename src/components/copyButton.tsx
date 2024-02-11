@@ -36,11 +36,7 @@ export function CopyButton({
         hidden={!onHover}
         onMouseEnter={() => setOnHover(true)}
       >
-        <FontAwesomeIcon
-          className={styles['copy-icon']}
-          icon={faCopy}
-          aria-hidden={true}
-        />
+        <FontAwesomeIcon icon={faCopy} aria-hidden={true} />
       </button>
       <span
         onMouseEnter={() => setOnHover(true)}
