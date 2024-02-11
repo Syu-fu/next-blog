@@ -1,10 +1,11 @@
 import { config } from '@fortawesome/fontawesome-svg-core';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { BIZ_UDPGothic } from 'next/font/google';
 
 import Box from '@/components/box';
 import Footer from '@/components/footer';
-import GoogleAnalytics from '@/components/googleAnalytics';
 import Header from '@/components/header';
+import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 
 import '@/app/globals.css';
 
@@ -23,7 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <GoogleAnalytics />
+      {process.env.NODE_ENV === 'production' && (
+        <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
+      )}
       <body className={bizUdpGothic.className}>
         <Header />
         <Box>{children}</Box>
