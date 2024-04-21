@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-export-optimize-images",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint:next": "next lint",
@@ -45,8 +45,10 @@
     "url-join": "^5.0.0"
   },
   "devDependencies": {
+    "@types/eslint": "~8.56.10",
     "@types/gtag.js": "^0.0.19",
     "@types/node": "^20",
+    "@types/prismjs": "~1.26.3",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/rss": "^0.0.32",
@@ -56,6 +58,7 @@
     "handlebars": "^4.7.8",
     "happy-css-modules": "^2.1.2",
     "markuplint": "^4.0.0",
+    "next-export-optimize-images": "^4.3.1",
     "prettier": "^3.1.1",
     "stylelint": "^16.0.2",
     "stylelint-config-recess-order": "^5.0.0",

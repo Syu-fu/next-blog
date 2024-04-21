@@ -1,9 +1,9 @@
 import { faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next-export-optimize-images/image';
 import { SVGProps } from 'react';
 
 import styles from '@/app/about/about.module.css';
-import { Img } from '@/components/Image';
 import { getBlogData } from '@/lib/getBlogData';
 
 import type { Metadata } from 'next';
@@ -23,7 +23,7 @@ export default async function About() {
       <h1>About</h1>
       <div className={styles['profile-container']}>
         <div className={styles.profile}>
-          <Img
+          <Image
             src={'profile-pic.webp'}
             alt={`${blog.author.name}のプロフィール写真`}
             width={100}
