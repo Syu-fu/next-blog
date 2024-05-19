@@ -56,7 +56,7 @@
     "eslint-config-next": "14.2.3",
     "eslint-plugin-import": "^2.29.1",
     "handlebars": "^4.7.8",
-    "happy-css-modules": "^2.1.2",
+    "happy-css-modules": "^3.0.0",
     "markuplint": "^4.0.0",
     "next-export-optimize-images": "^4.3.1",
     "prettier": "^3.1.1",
