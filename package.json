@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@types/eslint": "~8.56.10",
-    "@types/gtag.js": "^0.0.19",
+    "@types/gtag.js": "^0.0.20",
     "@types/node": "^20",
     "@types/prismjs": "~1.26.3",
     "@types/react": "^18",
