@@ -6,6 +6,8 @@
   ],
   "timezone": "Asia/Tokyo",
   "prConcurrentLimit": 5,
+  "automerge": true,
+  "platformAutomerge": true,
   "packageRules": [
     {
       "matchManagers": [
