@@ -26,7 +26,7 @@ jobs:
 
       - name: Generate Lighthouse report
         id: lighthouse_audit
-        uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8 # 12.1.0
+        uses: treosh/lighthouse-ci-action@fcd65974f7c4c2bf0ee9d09b84d2489183c29726 # 12.6.1
         env:
           REDIRECTED_URL_BASE: ${{ steps.get_redirected_url.outputs.REDIRECTED_URL }}
           REDIRECTED_URL_ABOUT: ${{ steps.get_redirected_url.outputs.REDIRECTED_URL }}${{'about'}}
@@ -81,7 +81,7 @@ jobs:
 
       - name: Comment Lighthouse Score
         id: comment_to_pr
-        uses: marocchino/sticky-pull-request-comment@52423e01640425a022ef5fd42c6fb5f633a02728 # v2.9.1
+        uses: marocchino/sticky-pull-request-comment@67d0dec7b07ed060a405f9b2a64b8ab319fdd7db # v2.9.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ github.event.issue.number }}
